@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Finding the maximum and minimum number</title>
+<script type="text/javascript" language="javascript">
+<!-- //
+function SetFocus(){
+    document.SimpleForm.FirstInput.focus();
+}
+
+function FindMaxAndMin(){
+    var num1 = document.SimpleForm.FirstInput.value;
+    var num2 = document.SimpleForm.SecondInput.value;
+    var num3 = document.SimpleForm.ThirdInput.value;
+
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)){
+        alert("You made an invalid entry. Please start again.");
+        document.SimpleForm.reset();
+        SetFocus();
+    } else {
+        var MaxNum = Math.max(num1,num2,num3);
+        var MinNum = Math.min(num1,num2,num3);
+        var alertString = "You entered " + num1 + ", " + num2 + " and " +num3;
+        alertString += "\nThe largest number is " + MaxNum;
+        alertString += "\nThe smallest number is " + MinNum;
+        document.write(alertString);
+        document.SimpleForm.reset();
+        SetFocus();
+    }
+}
+
+// -->
+</script>
+</head>
+<body onload="SetFocus()">
+<form name="SimpleForm">
+<table>
+<tr>
+ <td width="25%" align="right">Enter first number:</td>
+ <td><input name="FirstInput" type="text"></td>
+</tr>
+<tr>
+ <td width="25%" align="right">Enter second number:</td>
+ <td><input name="SecondInput" type="text"></td>
+</tr>
+<tr>
+ <td width="25%" align="right">Enter third number:</td>
+ <td><input name="ThirdInput" type="text"></td>
+</tr>
+<tr>
+ <td width="25%" align="right">&nbsp;</td>
+ <td><button type="Button" onclick="FindMaxAndMin()">
+Click to calculate</button></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
